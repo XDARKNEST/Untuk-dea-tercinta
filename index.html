@@ -14,75 +14,61 @@
 }
 
 body{
-    background:linear-gradient(135deg,#ff7eb3,#ff758c,#ffb199);
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    background:linear-gradient(180deg,#ffb6c1,#ffe4e1,#fff);
+    overflow-x:hidden;
+    min-height:100vh;
 }
 
 .container{
-    width:90%;
-    max-width:800px;
-    background:rgba(255,255,255,.2);
-    backdrop-filter:blur(10px);
+    max-width:700px;
+    margin:40px auto;
+    background:rgba(255,255,255,.92);
+    padding:25px;
     border-radius:20px;
-    padding:30px;
-    text-align:center;
-    color:white;
     box-shadow:0 0 20px rgba(0,0,0,.2);
-    z-index:2;
+    text-align:center;
 }
 
 h1{
+    color:#e91e63;
     margin-bottom:15px;
-    font-size:38px;
 }
 
-button{
+img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    border:6px solid #ff4d6d;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.9;
+    color:#444;
+}
+
+.emoji{
+    font-size:35px;
     margin-top:20px;
-    padding:15px 30px;
-    border:none;
-    border-radius:50px;
-    background:white;
-    color:#ff4f81;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-    font-weight:bold;
 }
 
-button:hover{
-    transform:scale(1.08);
-}
-
-#pesan{
-    display:none;
-    margin-top:25px;
-    line-height:1.8;
-    font-size:18px;
-    animation:fade .8s;
-}
-
-@keyframes fade{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-.heart{
-    position:absolute;
-    color:#fff;
+.rose{
+    position:fixed;
+    top:-50px;
+    font-size:30px;
     animation:fall linear infinite;
-    opacity:.8;
 }
 
 @keyframes fall{
 0%{
-transform:translateY(-100px) rotate(0deg);
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
 }
 100%{
 transform:translateY(110vh) rotate(360deg);
+opacity:0;
 }
 }
 </style>
@@ -91,61 +77,50 @@ transform:translateY(110vh) rotate(360deg);
 <body>
 
 <div class="container">
-<h1>❤️ Untuk Dea Anisya ❤️</h1>
 
-<p>Aku punya sesuatu yang ingin aku sampaikan...</p>
+<h1>💖 Maaf Ya Dea Anisya 💖</h1>
 
-<button onclick="bukaPesan()">Klik di sini yaa 🤍</button>
+<img src="https://i.ibb.co.com/b5f2BMsr/IMG-20260627-WA0029.jpg" alt="Foto Dea">
 
-<div id="pesan">
 <p>
-Untukkk manisssskuuu, sayanggggkuuu, cantikkuu Deaaa yang cantikkkknya pake bangettt, yang sering jadi my pemanis, my sugar, my kisah nanti, my fineshyt, and my favorite person. ❤️
+Untukkk manisssskuuu, sayanggggkuuu, cantikkuu Deaaa yang cantikkkk nya pake bangettt, yang sering jadi <b>my pemanis, my sugar, my kisah nanti, my fineshyt, and my favorite person</b>. 💗
 <br><br>
 
-Maaf yaaaa udah buat kamu badmood karena kelakuan akuuuu. Aku minta maaf kalau semisal udah buat kamu jadi badmood sama keseharian kamu atau jadi cuek ke aku.
+Maaf yaaaa udah buat kamu badmood karna kelakuan akuuuu. Aku minta maaf kalo semisal udah buat kamu jadi badmood sama keseharian kamu atau jadi cuek ke aku.
 <br><br>
 
-Maaf yaa sayanggg kalau emang aku udah buat kamu badmood karena aku. Aku tau aku salah karena udah ngelakuin hal yang bikin kamu jadi badmood.
+Maaf yaa sayanggg kalo emang aku dah buat kamu badmood karna aku. Aku tau aku salah, karna udah ngelakuin hal yang buat kamu jadinya badmood.
 <br><br>
 
-Aku nyesel setelah lakuin itu ke kamuuuu, sampai-sampai kamu jadi cuek ke akuuuuu.
+Aku nyesel setelah lakuin itu ke kamuuuu, sampe sampe kamu jadi cuek ke akuuuuu.
 <br><br>
 
-Maaf ya sayanggg... udah dong badmoodnya. Ntar aa ganteng ini nangis loh karena dicuekin terus sama my pemanis, my sugar, my kisah nanti, my fineshyt, and my favorite person. 🥺❤️
+Maaf ya sayanggg... udah dong badmoodnya. Ntar aa ganteng ini nangis loh 🥺😭 karena dicuekin terus sama <b>my pemanis, my sugar, my kisah nanti, my fineshyt, and my favorite person.</b>
 <br><br>
 
-Udah yaaa badmoodnya. Aku janji deh, gak bakal ngulangin lagi hal-hal yang bikin kamu badmood.
+Udah yaaa badmoodnya. Aku janji deh gak bakal ngulangin lagi hal-hal yang bikin kamu badmood.
 <br><br>
 
-Aku cuma pengen lihat kamu senyum lagi. Makasih udah jadi orang yang paling spesial buat aku.
-<br><br>
-
-🤍 I Love You, Dea Anisya 🤍
+Udah yaaaaa badmooddnyaaa manissskuuuu Dea... ❤️
 </p>
+
+<div class="emoji">
+🥺 😭 💔 😢 🥺 ❤️ 🌹
 </div>
 
 </div>
 
 <script>
-function bukaPesan(){
-document.getElementById("pesan").style.display="block";
+for(let i=0;i<35;i++){
+let rose=document.createElement("div");
+rose.className="rose";
+rose.innerHTML="🌹";
+rose.style.left=Math.random()*100+"vw";
+rose.style.animationDuration=(5+Math.random()*6)+"s";
+rose.style.animationDelay=Math.random()*5+"s";
+rose.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(rose);
 }
-
-function buatHati(){
-const hati=document.createElement("div");
-hati.classList.add("heart");
-hati.innerHTML="❤";
-hati.style.left=Math.random()*100+"vw";
-hati.style.fontSize=(15+Math.random()*25)+"px";
-hati.style.animationDuration=(4+Math.random()*6)+"s";
-document.body.appendChild(hati);
-
-setTimeout(()=>{
-hati.remove();
-},10000);
-}
-
-setInterval(buatHati,250);
 </script>
 
 </body>
